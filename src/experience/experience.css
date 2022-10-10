@@ -1,0 +1,96 @@
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 650px;
+}
+
+.exp-card {
+    opacity: 0;
+    width: 100%;
+    background-color: #0b1227;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 30px;
+    padding-bottom: 30px;
+    transition: 0.5s;
+    border: 1px solid #292929;
+    box-shadow: 1px 1px 10px #1c202d;
+    margin-bottom: 40px;
+}
+
+.exp-card:hover {
+    border: 1px solid #ed5c81;
+    box-shadow: 1px 1px 25px #7c1f37;
+}
+
+.exp-card > .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 1px solid #cff6ff;
+    margin-bottom: 15px;
+}
+
+.exp-card > .header > h2 {
+    color: #dadada;
+}
+
+.exp-card > .header > h4 {
+    color: #d0d0d0;
+    font-family: monospace;
+}
+
+.work-location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.work-desc {
+    color: white;
+}
+
+.work-desc > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.work-desc > ul > li::before {
+    content: "▻";
+    color: #db72a2;
+    position: absolute;
+    left: 8px;
+}
+
+.work-desc > ul > li {
+    padding-left: 29px;
+    margin-bottom: 15px;
+}
+
+.exp-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.exp-skills > div {
+    padding: 7px 15px;
+    box-sizing: border-box;
+    font-size: 13px;
+    border: 1px solid #ed5c81;
+    color: #f3dfe5;
+    border-radius: 5px;
+}

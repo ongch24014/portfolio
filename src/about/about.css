@@ -1,0 +1,45 @@
+.about > h1, .about > h2, .about > h3, .about > .desc {
+    opacity: 0;
+    animation: 1s ease-out appearOnSight;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    color: #e3e3e3;;
+}
+
+.about > h1 {
+    margin: 10px 0;
+    font-size: 3rem;
+    animation-delay: 2s;
+}
+
+.about > h2 {
+    margin: 0;
+    font-size: 2rem;
+    animation-delay: 1s;
+}
+
+.about > h3 {
+    margin: 15px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    animation-delay: 3s;
+}
+
+.about > .desc {
+    width: 70%;
+    text-align: justify;
+    letter-spacing: 1px;
+    animation-delay: 4s;
+}
+
+@keyframes appearOnSight {
+    0% {
+        /* transform: translateX(-500%); */
+        opacity: 0;
+    }
+
+    100% {
+        /* transform: translateX(0); */
+        opacity: 1;
+    }
+}

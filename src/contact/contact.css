@@ -1,0 +1,58 @@
+.contact {
+    background-color: #070c1d;
+    position: relative;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 100%;
+    width: 55%;
+    height: 100%;
+    background-color: #0a1228;
+    transform: translate(87%, 31%);
+    z-index: 1;
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 71% 98%;
+    width: 55%;
+    height: 100%;
+    background-color: #070c1d;
+    transform: translate(-4%, 65%);
+    z-index: -1;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 50px;
+}
+
+.c-icon {
+    color: #8f8f8f;
+    font-size: 60px !important;
+    transition: 0.3s !important;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.c-icon:hover {
+    color: #ed9bb0;
+}

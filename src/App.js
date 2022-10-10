@@ -1,23 +1,77 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './navbar/navbar';
+import About from './about/about';
+import Skill from './skill/skill'
+import Experience from './experience/experience';
+import Contact from './contact/contact';
+import { useEffect, useState } from 'react';
+import 'animate.css';
 
 function App() {
+  const [currentNav, setNav] = useState('about');
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+
+    return (
+      () => {
+        window.removeEventListener('scroll', onScroll);
+      }
+    )
+  }, [currentNav]);
+
+  const onScroll = () => {
+
+    const windowScroll = window.innerHeight + window.scrollY;
+    if (windowScroll < window.innerHeight + (window.innerHeight / 2)) {
+      setNav('about');
+    } else if ((window.innerHeight + window.scrollY) / document.body.offsetHeight >= 0.99) {
+      setNav('contact');
+    } else {
+      const navlist = ['about', 'skill', 'experience'];
+      navlist.forEach(element => {
+        
+        const ele = document.getElementById(element);
+        const navHeight = ele.offsetTop + (window.innerHeight / 2);
+        if (navHeight / windowScroll * 100 > 66 && navHeight / windowScroll * 100 < 100) {
+          setNav(element);
+          return;
+        }
+      });
+    }
+    
+
+    if (window.scrollY >= 140) {
+      document.getElementById('navbar').classList.add('background');
+    } else {
+      document.getElementById('navbar').classList.remove('background');
+    }
+
+    const elements = document.getElementsByClassName('animate__animated');
+    Array.from(elements).forEach(element => {
+      if (element.classList.contains('animate__fadeInUp')) {
+        return;
+      }
+
+      const targetScroll = element.getBoundingClientRect().top + document.documentElement.scrollTop + 30;
+      if (windowScroll >= targetScroll) {
+        element.classList.add('animate__fadeInUp');
+      }
+    });
+  }
+
+  function change(state) {
+    setNav(state);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar dark="true" current={currentNav} change={(state) => change(state)}></Navbar>
+      <About dark="true"></About>
+      <Skill dark="true"></Skill>
+      <Experience dark="true"></Experience>
+      <Contact dark="true"></Contact>
     </div>
   );
 }

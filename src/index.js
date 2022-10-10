@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./fonts/Silkscreen/Silkscreen-Regular.ttf";
+import "./fonts/DM_Sans/DMSans-Regular.ttf";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

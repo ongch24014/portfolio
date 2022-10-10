@@ -1,0 +1,39 @@
+.skill-list > .b-react:hover {
+    border-color: #80d8f7;
+    color: #80d8f7;
+}
+
+.skill-list > .b-angular:hover {
+    border-color: #e9505e;
+    color: #e9505e;
+}
+
+.skill-list > .b-html:hover {
+    border-color: #f69c68;
+    color: #f69c68;
+}
+
+.skill-list > .b-css:hover {
+    border-color: #3077b8;
+    color: #3077b8;
+}
+
+.skill-list > .b-js:hover {
+    border-color: #ffef85;
+    color: #ffef85;
+}
+
+.skill-list > .b-ts:hover {
+    border-color: #4079c2;
+    color: #4079c2;
+}
+
+.skill-list > .b-go:hover {
+    border-color: #4bacd5;
+    color: #4bacd5;
+}
+
+.skill-list > .b-python:hover {
+    border-image: linear-gradient(90deg, #3f7cb8, #fadb66) 1;
+    color: #ffef85;
+}

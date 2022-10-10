@@ -5,9 +5,149 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0a1228;
+  background-image: url('./image/haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-title {
+  opacity: 0;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: rgb(255 77 128);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.App {
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.background {
+  background-color: #0a1228e3;
+  backdrop-filter: blur(6px);
+}
+
+.nav-sel {
+  color: rgb(255 77 128);
+}
+
+.navbar.dark {
+  color: white;
+}
+
+.navbar.dark > .nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav > span {
+  cursor: pointer;
+  font-family: "Silkscreen";
+}
+
+.about {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: calc(100vh);
+  font-family: "DMSans";
+  padding: 0 15vw;
+  padding-top: 230px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about.dark {
+  color: white;
+}
+
+.skill, .experience, .contact {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15vw;
+  width: 100%;
+  font-family: "DMSans";
+  box-sizing: border-box;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+.skill-list {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill-list > div {
+  height: 60px;
+  width: 45%;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: left;
+  color: #a3a3a3;
+  cursor: default;
+  user-select: none;
+  transition: 0.3s;
+  border: 1px solid;
+  padding-left: 15%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.skill-logo {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+
+.skill-list > div:hover {
+  letter-spacing: 1px;
+}
+
+.skill-list > div:hover > .skill-logo {
+  filter: grayscale(0);
+}
+
+@font-face {
+  font-family: "Silkscreen";
+  src: local("Silkscreen"),
+    url("./fonts/Silkscreen/Silkscreen-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: local("DMSans"),
+    url("./fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
 }
