@@ -62,7 +62,7 @@ function App() {
   }
 
   function change(state) {
-    setNav(state);
+    // setNav(state);
   }
 
   return (
