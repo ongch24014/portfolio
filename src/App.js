@@ -6,10 +6,14 @@ import Skill from './skill/skill'
 import Experience from './experience/experience';
 import Contact from './contact/contact';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import 'animate.css';
 
 function App() {
   const [currentNav, setNav] = useState('about');
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 768px)'
+  })
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
@@ -19,7 +23,7 @@ function App() {
         window.removeEventListener('scroll', onScroll);
       }
     )
-  }, [currentNav]);
+  }, []);
 
   const onScroll = () => {
 
@@ -31,7 +35,7 @@ function App() {
     } else {
       const navlist = ['about', 'skill', 'experience'];
       navlist.forEach(element => {
-        
+
         const ele = document.getElementById(element);
         const navHeight = ele.offsetTop + (window.innerHeight / 2);
         if (navHeight / windowScroll * 100 > 66 && navHeight / windowScroll * 100 < 100) {
@@ -40,7 +44,7 @@ function App() {
         }
       });
     }
-    
+
 
     if (window.scrollY >= 140) {
       document.getElementById('navbar').classList.add('background');
@@ -67,7 +71,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar dark="true" current={currentNav} change={(state) => change(state)}></Navbar>
+      <Navbar dark="true" current={currentNav} change={(state) => change(state)} isDesktopOrLaptop={isDesktopOrLaptop}></Navbar>
       <About dark="true"></About>
       <Skill dark="true"></Skill>
       <Experience dark="true"></Experience>

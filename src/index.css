@@ -45,6 +45,11 @@ code {
   transition: 0.3s;
 }
 
+.drawer >>> span {
+  width: 100px;
+  padding: 10px;
+}
+
 .background {
   background-color: #0a1228e3;
   backdrop-filter: blur(6px);
