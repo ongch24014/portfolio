@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
 
     change(state) {
         const element = document.getElementById(state);
-        window.scrollTo({top: (element.offsetTop - 100), behavior: 'smooth'});
+        window.scrollTo({ top: (element.offsetTop - 100), behavior: 'smooth' });
         this.props.change(state);
     }
 
