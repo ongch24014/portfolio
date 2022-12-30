@@ -24,6 +24,7 @@ code {
   color: rgb(255 77 128);
   font-weight: bold;
   margin-bottom: 50px;
+  z-index: 2;
 }
 
 .App {
