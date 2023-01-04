@@ -5,11 +5,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default class Contact extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.function = this.function.bind(this);
-        // this.state;
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.function = this.function.bind(this);
+    //     // this.state;
+    // }
 
     render() {
         return (

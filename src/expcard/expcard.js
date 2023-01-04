@@ -3,9 +3,9 @@ import "./expcard.css";
 import PlaceIcon from '@mui/icons-material/Place';
 
 export default class Expcard extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (

@@ -14,7 +14,8 @@ export default function Navbar({ dark, current, change, isDesktopOrLaptop }) {
         paddingTop: "25px",
         fontFamily: "Silkscreen"
     }
-    let selected = 'about';
+
+    // let selected = 'about';
 
     function changeState(state) {
         if (!isDesktopOrLaptop) {

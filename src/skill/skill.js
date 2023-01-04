@@ -15,7 +15,7 @@ export default class Skill extends React.Component {
 
         function importAll(r) {
             let images = {};
-            r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+            r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); return null });
             return images;
         }
 
@@ -44,13 +44,13 @@ export default class Skill extends React.Component {
                         <JSLogo className="skill-logo" /> <span>JavaScript</span>
                     </div>
                     <div className="b-ts">
-                        <img src={this.images['typescript.png']} className="skill-logo" /> <span>TypeScript</span>
+                        <img src={this.images['typescript.png']} className="skill-logo" alt="typescript" /> <span>TypeScript</span>
                     </div>
                     <div className="b-go">
-                        <img src={this.images['go.png']} className="skill-logo" /> <span>Go</span>
+                        <img src={this.images['go.png']} className="skill-logo" alt="go" /> <span>Go</span>
                     </div>
                     <div className="b-python">
-                        <img src={this.images['python.png']} className="skill-logo" /> <span>Python</span>
+                        <img src={this.images['python.png']} className="skill-logo" alt="python" /> <span>Python</span>
                     </div>
                 </div>
             </div>
