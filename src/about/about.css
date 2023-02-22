@@ -9,27 +9,27 @@
 .about > h1 {
     margin: 10px 0;
     font-size: 3rem;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .about > h2 {
     margin: 0;
     font-size: 2rem;
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 .about > h3 {
     margin: 15px;
     margin-bottom: 50px;
     font-size: 2rem;
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 
 .about > .desc {
     width: 70%;
     text-align: justify;
     letter-spacing: 1px;
-    animation-delay: 4s;
+    animation-delay: 6s;
 }
 
 @keyframes appearOnSight {

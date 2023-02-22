@@ -4,6 +4,7 @@ import About from './about/about';
 import Skill from './skill/skill'
 import Experience from './experience/experience';
 import Contact from './contact/contact';
+import LoadingPage from './LoadingPage';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import 'animate.css';
@@ -59,6 +60,7 @@ function App() {
 
       const targetScroll = element.getBoundingClientRect().top + document.documentElement.scrollTop + 30;
       if (windowScroll >= targetScroll) {
+        console.log('add')
         element.classList.add('animate__fadeInUp');
       }
     });
@@ -70,6 +72,7 @@ function App() {
 
   return (
     <div className="App">
+      <LoadingPage></LoadingPage>
       <Navbar dark="true" current={currentNav} change={(state) => change(state)} isDesktopOrLaptop={isDesktopOrLaptop}></Navbar>
       <About dark="true"></About>
       <Skill dark="true"></Skill>

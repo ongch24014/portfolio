@@ -5,12 +5,6 @@ import Expcard from "../expcard/expcard";
 
 
 export default class Experience extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.function = this.function.bind(this);
-        // this.state;
-    }
-
     render() {
         return (
             <div className={`experience ${this.props.dark ? " dark" : ''}`} id="experience">
