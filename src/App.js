@@ -16,6 +16,7 @@ function App() {
   })
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual';
     window.addEventListener('scroll', onScroll);
 
     return (
