@@ -175,7 +175,7 @@ code {
   width: 100vw;
   height: 100vh;
   background-color: #0A1227;
-  z-index: 2;
+  z-index: 10;
 }
 
 .projects {
@@ -225,6 +225,7 @@ code {
   gap: 10px;
   font-size: 14px;
   color: #b9b9b9 !important;
+  flex-wrap: wrap;
 }
 
 .project:hover {
