@@ -1,14 +1,16 @@
 const experienceData = [
     {
-        title: 'Developer',
+        title: 'Backend Engineer',
         company: 'CSI Interfusion',
         duration: 'Sep 2022 - Present',
         location: 'Kuala Lumpur, Malaysia',
         description: [
-            `Currently working on developing Malaysia's first digital bank at Grab`
+            `Participated in developing Malaysia's first digital bank at Grab.`,
+            `Collaborated with backend engineers to maintain application efficiency. `,
+            `Wrote unit test, test execution for modules and functions.`
         ],
         skills: [
-            'GoLang'
+            'GoLang', 'Amazon Web Server'
         ]
     },
     {
@@ -32,4 +34,4 @@ const experienceData = [
     }
 ];
 
-export {experienceData}
+export { experienceData }
