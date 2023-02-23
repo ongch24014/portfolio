@@ -45,7 +45,7 @@ code {
   padding: 0 50px;
   box-sizing: border-box;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   transition: 0.3s;
 }
 
@@ -95,7 +95,7 @@ code {
   color: white;
 }
 
-.skill, .experience, .contact {
+.skill, .experience, .contact, .projects {
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
@@ -176,4 +176,70 @@ code {
   height: 100vh;
   background-color: #0A1227;
   z-index: 2;
+}
+
+.projects {
+  padding-bottom: 200px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project {
+  position: relative;
+  background: #0d193c;
+  box-sizing: border-box;
+  width: 400px;
+  gap: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  border: 1px solid #202125;
+  box-shadow: 1px 1px 10px #18191d;
+  cursor: default;
+}
+
+.project-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.project-header > span:nth-child(2) {
+  font-size: 16px;
+}
+
+.project-languages {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #b9b9b9 !important;
+}
+
+.project:hover {
+  color: #fc648f;
+}
+
+.project-gh {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  transition: 0.2s !important;
+  cursor: pointer;
+}
+
+.project-gh:hover {
+  color: #f787a7;
 }

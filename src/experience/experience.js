@@ -10,7 +10,6 @@ export default class Experience extends React.Component {
             <div className={`experience ${this.props.dark ? " dark" : ''}`} id="experience">
                 <span className="main-title animate__animated" style={{ textAlign: "center" }} id="experience1">Experience</span>
 
-
                 <div className="experience-list">
                     {
                         experienceData.map((exp, index) => {
@@ -24,7 +23,6 @@ export default class Experience extends React.Component {
                     }
                 </div>
 
-                <div className="curve"></div>
             </div>
         )
     }

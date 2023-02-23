@@ -20,6 +20,10 @@
     margin-bottom: 40px;
 }
 
+.exp-card:last-child {
+    margin-bottom: auto;
+}
+
 .exp-card:hover {
     border: 1px solid #ed5c81;
     box-shadow: 1px 1px 25px #7c1f37;

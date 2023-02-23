@@ -40,7 +40,7 @@ export default function Navbar({ dark, current, change, isDesktopOrLaptop }) {
                     <span className={current === 'about' ? 'nav-sel' : ''} onClick={() => { changeState('about') }}>About</span>
                     <span className={current === 'skill' ? 'nav-sel' : ''} onClick={() => { changeState('skill') }}>Skills</span>
                     <span className={current === 'experience' ? 'nav-sel' : ''} onClick={() => { changeState('experience') }}>Experience</span>
-                    {/* <span className={current === 'project' ? 'nav-sel' : ''} onClick={() => {changeState('project')}}>Projects</span> */}
+                    <span className={current === 'projects' ? 'nav-sel' : ''} onClick={() => { changeState('projects') }}>Projects</span>
                     <span className={current === 'contact' ? 'nav-sel' : ''} onClick={() => { changeState('contact') }}>Contact</span>
                 </div> :
                 <div className="burger">

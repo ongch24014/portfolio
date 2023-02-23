@@ -8,6 +8,7 @@ import LoadingPage from './LoadingPage';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import 'animate.css';
+import Projects from './projects/Projects';
 
 function App() {
   const [currentNav, setNav] = useState('about');
@@ -34,7 +35,7 @@ function App() {
     } else if ((window.innerHeight + window.scrollY) / document.body.offsetHeight >= 0.99) {
       setNav('contact');
     } else {
-      const navlist = ['about', 'skill', 'experience'];
+      const navlist = ['about', 'skill', 'experience', 'projects'];
       navlist.forEach(element => {
 
         const ele = document.getElementById(element);
@@ -61,7 +62,6 @@ function App() {
 
       const targetScroll = element.getBoundingClientRect().top + document.documentElement.scrollTop + 30;
       if (windowScroll >= targetScroll) {
-        console.log('add')
         element.classList.add('animate__fadeInUp');
       }
     });
@@ -78,6 +78,7 @@ function App() {
       <About dark="true"></About>
       <Skill dark="true"></Skill>
       <Experience dark="true"></Experience>
+      <Projects dark="true"></Projects>
       <Contact dark="true"></Contact>
     </div>
   );
